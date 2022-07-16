@@ -1,6 +1,6 @@
 
 
-from acceptance_criteria import compute_acceptance_criteria
+#from acceptance_criteria import compute_acceptance_criteria
 
 
 def evaluate_model(model_results_path:str, acceptance_criteria:dict=None):

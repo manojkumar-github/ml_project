@@ -40,16 +40,21 @@ class TrainingPipeline:
             raise MLException(f"Invalid value {self.training_percent} passed for training_percent."
                               f"Allowed values are in (0.0, 1.0]")
 
-    def _create_target_path(self):
+    def _create_target_path(self, run_directory=None):
         """
 
         Returns:
 
         """
-        return 0
+        if run_directory is None:
+            # create pipeline directory in current working directory
+            pass
+        else:
+            # create pipeline directory in given run directory
+            pass
 
-    def run(self, run_name: str, predict_prob=True, acceptance_criteria:dict=None):
-        target_path = self._create_target_path()
+    def run(self, run_directory=None, acceptance_criteria:dict=None):
+        target_path = self._create_target_path(run_directory=run_directory)
         dataset = create_dataset()
         preprocessed_dataset = preprocess_dataset(input_dataset=dataset)
         train_dataset, test_dataset = create_train_test_split(preprocessed_dataset, self.training_percent)
