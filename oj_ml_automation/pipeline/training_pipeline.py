@@ -3,14 +3,14 @@
 
 
 
-from data_creation import create_dataset
-from data_preprocessing import preprocess_dataset
-from feature_transformer import create_training_features
-from train_test_split import create_train_test_split
-from helpers import  MLException, ml_logger
-from model_training import train_model
-from model_inference import infer_model
-from model_evaluation import evaluate_model
+from ..ml_modules.data_creation import create_dataset
+from ..ml_modules.data_preprocessing import preprocess_dataset
+from ..ml_modules.feature_transformer import create_training_features
+from ..ml_modules.train_test_split import create_train_test_split
+from ..helpers import  MLException, ml_logger
+from ..ml_modules.model_training import train_model
+from ..ml_modules.model_inference import infer_model
+from ..ml_modules.model_evaluation import evaluate_model
 
 
 class TrainingPipeline:

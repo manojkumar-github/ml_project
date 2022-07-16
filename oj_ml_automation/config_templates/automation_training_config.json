@@ -1,10 +1,9 @@
 {
-  "experiment_name": "Foo",
+  "pipeline_name": "Foo",
   "run_type": "training"
 {
   "run_name": "bar",
   "train_percent": 70,
-  "predict_prob" : False,
   "acceptance_criteria": {
     "green": {
       "min_accuracy": 80,
