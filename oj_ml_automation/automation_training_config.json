@@ -1,0 +1,25 @@
+{
+  "experiment_name": "Foo",
+  "run_type": "training"
+{
+  "run_name": "bar",
+  "train_percent": 70,
+  "predict_prob" : False,
+  "acceptance_criteria": {
+    "green": {
+      "min_accuracy": 80,
+      "min_recall" : 70
+    },
+        "yellow": {
+      "min_accuracy": 80,
+      "min_recall" : 70
+    }
+  }
+
+}
+{
+  "run_name": "bar",
+  "train_percent": 60
+
+}
+}

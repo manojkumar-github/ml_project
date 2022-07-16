@@ -1,0 +1,11 @@
+"""
+logs.txt
+
+only best metric train/test and best model save
+train predictions
+test predictions
+
+flag == "inference"
+inference prdictions
+metrics.sheet - acceptance critiera blue green red
+"""
