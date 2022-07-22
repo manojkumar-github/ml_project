@@ -3,11 +3,10 @@ Experiment runs
 """
 
 import os
-import re
 from datetime import datetime
-from helpers import ml_logger, MLException
-from ml_project.ml_project.oj_ml_automation.pipeline.training_pipeline import TrainingPipeline
-from ml_project.ml_project.oj_ml_automation.pipeline.inference_pipeline import InferencePipeline
+from oj_ml_automation.helpers import ml_logger, MLException
+from oj_ml_automation.pipeline.training_pipeline import TrainingPipeline
+from oj_ml_automation.pipeline.inference_pipeline import InferencePipeline
 
 
 class Experiment:
@@ -33,7 +32,8 @@ class Experiment:
         ml_logger.info(f"Current directory = {current_dir}")
         # handle if user inputs experiment name with spaces
         exp_name = "_".join(exp_name.split(" "))
-        experiment_dir = os.path.join(os.path.join(current_dir, "experiment_runs"), exp_name)
+        #experiment_dir = os.path.join(os.path.join(current_dir, "experiment_runs"), exp_name)
+        experiment_dir = os.path.join(os.path.join("../oj_ml_automation", "experiment_runs"), exp_name)
         if not os.path.isdir(experiment_dir):
             ml_logger.info(f"{exp_name} experiment does not exist. Initiating it for the first time")
             os.mkdir(experiment_dir)
